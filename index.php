@@ -3,9 +3,10 @@
 // use curlspot.orchestra.io to launch
 
 // $url = 'http://www.indeed.com/rc/clk?jk=ca819a6473e3c8a9';
-$url = $_GET['u'];
+$job = $_GET['job'];
 
-if (isset($url)) {
+if (isset($job)) {
+		$url = 'http://www.indeed.com/rc/clk?jk='.$job
 		echo curlme($url);
 }
 
