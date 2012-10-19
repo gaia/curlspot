@@ -5,7 +5,9 @@
 // $url = 'http://www.indeed.com/rc/clk?jk=ca819a6473e3c8a9';
 $url = $_GET['u'];
 
-echo curlme($url);
+if (isset($url)) {
+		echo curlme($url);
+}
 
 function curlme($url) {
 		$proxy = ''; //'205.251.154.158:80';
