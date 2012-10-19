@@ -6,7 +6,7 @@
 $job = $_GET['job'];
 
 if (isset($job)) {
-		$url = 'http://www.indeed.com/rc/clk?jk='.$job
+		$url = 'http://www.indeed.com/rc/clk?jk='.$job;
 		echo curlme($url);
 }
 
