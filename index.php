@@ -3,7 +3,7 @@
 // use curlspot.orchestra.io to launch
 
 // $url = 'http://www.indeed.com/rc/clk?jk=ca819a6473e3c8a9';
-$j = $_GET["j"];
+$j = preg_replace("/[^a-zA-Z0-9\s]/", "", $_GET["j"]);
 
 if (isset($j)) {
 		$url = 'http://www.indeed.com/rc/clk?jk='.$j;
