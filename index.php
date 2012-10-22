@@ -27,7 +27,7 @@ function curlme($url) {
 		if(preg_match('#Location: (.*)#', $a, $r))
 		 $l = trim($r[1]);
 		
-		if (isset($l) && (preg_match('#indeed.com#', $a, $r))) {
+		if (isset($l) && (preg_match('#indeed.com#', $l, $r))) {
     		curl_setopt($ch, CURLOPT_URL, $l);
 				$a = curl_exec($ch);
 				if(preg_match('#Location: (.*)#', $a, $r))
