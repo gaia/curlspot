@@ -27,14 +27,14 @@ function curlme($url) {
 		if(preg_match('#Location: (.*)#', $a, $r))
 		 $l = trim($r[1]);
 		
-		if (isset($l)) {
+		if (isset($l) && (preg_match('indeed.com', $a, $r))) {
     		curl_setopt($ch, CURLOPT_URL, $l);
 				$a = curl_exec($ch);
 				if(preg_match('#Location: (.*)#', $a, $r))
-		 		$finall = trim($r[1]);
+		 		$l = trim($r[1]);
 		}
 		
-		return $finall;
+		return $l;
 }
 
 ?>
